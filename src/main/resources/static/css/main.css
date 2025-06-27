@@ -1,0 +1,52 @@
+body {
+    background: url("./../images/back.png");
+    text-align: center;
+    background-size: cover;
+
+}
+
+.text_name {
+    font-family: "Bold Italic Art", serif;
+    font-size: 2rem;
+    color: blue;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+button {
+    border-radius: 25rem;
+    width: 6rem;
+    height: 3rem;
+}
+
+.delete {
+    background-color: red;
+    margin-left: 3rem;
+}
+
+.update {
+    background-color: orange;
+    margin-left: 10rem;
+}
+
+.create {
+    background-color: green;
+}
+
+.full {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    padding: 5px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;">
+}
+
+.buttons-right {
+    width: 0.1rem;
+}

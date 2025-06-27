@@ -1,0 +1,87 @@
+@media(max-width: 600px){
+    .text{
+        flex-size:14px;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    list-style: none;
+    text-decoration: none;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    text-decoration-color: black;
+}
+:root{
+    --color-hover: blue;
+    --font_h: clamp(2.8rem, 1.2vw , 6rem);
+    --font: clamp(2.4rem, 1vw , 5rem);
+}
+
+span {
+    color: cyan;
+}
+
+p {
+    color: #ffff;
+}
+h1, h2, h3 {
+    color: #ffff;
+}
+img{
+    width: clamp(10rem, 50vw, 60rem);
+    border-radius: 20rem;
+}
+
+.image{
+    text-align: center;
+}
+
+a{
+    font-family: cursive Serif;
+    font-size: 3rem;
+    border: green solid 0.5rem;
+}
+
+li, a{
+    color: blue;
+}
+
+.resume {
+    width: clamp(100rem, 100vw, 110rem);
+    background-size: cover; /* Растягивает изображение на всю область, сохраняя пропорции */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение */
+    background-attachment: fixed; /* Фиксирует фон (опционально) */
+
+}
+body{
+    background: url(../images/windows.jpg);
+    background-size: cover; /* Растягивает изображение на всю область, сохраняя пропорции */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение */
+    background-attachment: fixed; /* Фиксирует фон (опционально) */
+    text-align: center;
+}
+
+html, body {
+    height: 100%; /* Важно для растягивания на весь экран */
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Растягивает основной контент, чтобы футер был внизу */
+}
+
+.text {
+    background-color: darkorange;
+    border-radius: 20rem;
+}
+
