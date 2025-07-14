@@ -36,7 +36,7 @@ public class EmployeeServices {
     }
 
     public EmployeeDto createEmployee(CreateEmployeeRequest request) {
-        if (repository.findByName(request.getFirstName()).isPresent()) {
+        if (repository.findByName(request.getFirstName()) != null) {
         throw new IllegalArgumentException("Employee with name " + request.getFirstName() + " already exists");
         }
 
