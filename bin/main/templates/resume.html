@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http - FORBIDDEN - www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Resume</title>
+</head>
+<body>
+<header id=home>
+    <h1 th:text="${employee.firstName}"/>
+    <h2>Java developer</h2>
+    <h3>****************************</h3>
+    <nav>
+        <a href="/images/img.png">summary</a>
+        <a href="#experience">experience</a>
+        <a href="#skills">skills</a>
+        <a href="#education">education</a>
+    </nav>
+</header>
+<main>
+    <section class="summary" id="summary">
+        <h2>SUMMARY</h2>
+        <div class="image">
+            <img src="/images/image.webp" alt="image"/>
+            <div>
+                <ul>
+                    <li>tg: <span>@crashERI</span></li>
+                    <li>phone: <span>+375295067831</span></li>
+                    <li>mail: <span>gg</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="text">
+        <section class="experience" id="experience">
+            <h2>EXPERIENCE</h2>
+            <p>
+                Worked on the creation of telegram bots, frontend, and also on a graphic editor with a full-fledged
+                UI. I study at Brest State Technical University
+            </p>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2>SKILLS</h2>
+            <p>
+                Knowledge of Java Syntax, Java Core, OOP principles, GIT and database, Docker, SOLID principles,
+                TelegramBotsAPI library, hypertext document markup
+            </p>
+        </section>
+
+        <section class="education" id="education">
+            <h2>EDUCATION</h2>
+            <p>
+                Brest State Technical University, Faculty of Electronic Information Systems, specialty: Information
+                Technology Software, 3rd year (name of university, specialty)
+                I am studying at the STEP IT Academy (IT STEP SPHERE LLC) for the position of Java Developer
+            </p>
+        </section>
+    </div>
+
+</main>
+<div>
+    <footer>
+        <p>2025 resume Ilya Golovach</p>
+    </footer>
+</div>
+</body>
+</html>

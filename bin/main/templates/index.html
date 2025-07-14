@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http - FORBIDDEN - www.thymeleaf.org ">
+<head>
+    <title>Resumes List</title>
+    <link rel="stylesheet" href="\css\main.css" type="text/css"/>
+    <script src="/js/index.js"></script>
+</head>
+<body>
+<h1>Resumes List</h1>
+<div  class="create-button">
+    <button class="create"><a th:href="@{/resumes/create}" style="text-decoration: none; color: inherit; cursor: pointer;"
+    > <span class = "action" >Create</span></a></button>
+</div>
+<ul>
+    <ul class="full">
+        <li th:each="employee : ${employees}">
+            <div class="iteam">
+                <div class = "name" >
+                    <a class="text_name" th:href="@{/resumes/{id}(id=${employee.id})}"> <span th:text="${employee.firstName}"></span> </a>
+                    <div class="buttons-right">
+
+                        <button class="update"><a th:href="@{/resumes/edit/{id}(id=${employee.id})}"
+                                                                         style="text-decoration: none; color: inherit; cursor: pointer;"> <span class = "action">Update</span></a>
+                        </button>
+
+                        <button class="delete"><a th:href="@{/resumes/delete/{id}(id=${employee.id})}"
+                                                  style="text-decoration: none; color: inherit; cursor: pointer;" onclick="return confrimDelete()">
+                            <span class = "action" >Delete</span></a>
+                        </button>
+                    </div>
+
+                </div>
+<!--                <div class = "button-class">-->
+<!--                    <a th:href="@{/resumes/edit/{id}(id=${employee.id})}"> <span class = "action">Update</span></a>-->
+<!--                    <a th:href="@{/resumes/delete/{id}(id=${employee.id})}"> <span class = "action" >Delete</span></a>-->
+<!--                </div>-->
+
+            </div>
+        </li>
+    </ul>
+</ul>
+
+</body>
+</html>
