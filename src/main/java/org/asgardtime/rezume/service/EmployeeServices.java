@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 
-import java.util.Optional;
-
 @Service
 @AllArgsConstructor
 public class EmployeeServices {
@@ -36,19 +34,18 @@ public class EmployeeServices {
     }
 
     public EmployeeDto createEmployee(CreateEmployeeRequest request) {
-        if (repository.findByName(request.getFirstName()) != null) {
+        if (repository.findByFirstName(request.getFirstName()) != null) {
         throw new IllegalArgumentException("Employee with name " + request.getFirstName() + " already exists");
         }
 
-        Employee employee = new Employee(
-        4,
-        request.getFirstName(),
-        request.getLastName(),
-        request.getEmail(),
-        "+375291234567",
-        "@floppa",
-        "/images/back.png",
-        2);
+        Employee employee = new Employee();
+        employee.setFirstName(request.getFirstName());
+        employee.setLastName(request.getLastName());
+        employee.setEmail(request.getEmail());
+        employee.setNumber(request.getNumber());
+        employee.setNickTelegram(request.getNickTelegram());
+        employee.setImage(request.getImage());
+        employee.setEnglishLevels(request.getEnglish_level());
 
         var saved = repository.save(employee);
 
